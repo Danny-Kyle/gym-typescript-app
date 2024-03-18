@@ -53,7 +53,13 @@ const Benefits = ({setSelectedPage}: Props) => {
         </div>
 
         {/**indi benesfits */}
-        <div>
+        <motion.div
+        initial= "hidden"
+        whileInView="visible"
+        viewport={{once: true, amount: 0.5}}
+        variants={container}
+         className="mt-5 items-center justify-between gap-8 md:flex"
+        >
           {benefits.map((benefit: BenefitType) => (
             <Benefit 
             key={benefit.title}
@@ -63,7 +69,7 @@ const Benefits = ({setSelectedPage}: Props) => {
             setSelectedPage={setSelectedPage}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   )
