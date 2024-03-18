@@ -79,6 +79,34 @@ const Benefits = ({setSelectedPage}: Props) => {
             />
           ))}
         </motion.div>
+
+        {/**graphic images and desc */}
+        <div>
+          {/**graph */}
+          <img src="" alt=""/>
+          {/**description */}
+          <div>
+            {/**title*/}
+            <div className="relative">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                <div>
+                  <HText>
+                    MILLIONS OF HAPPY MEMBERS GETTING {"  "}
+                    <span className="text-primary-500">FIT</span>
+                  </HText>
+                </div>
+              </div>
+            </div>
+            {/**dsc*/}
+            <div>
+              <p className="my-5">
+              Odavno je uspostavljena činjenica da čitača ometa razumljivi tekst dok gleda raspored elemenata na stranici. Smisao korištenja Lorem Ipsum-a jest u tome što umjesto 'sadržaj ovjde, sadržaj ovjde' imamo normalni raspored slova i riječi, pa čitač ima dojam da gleda tekst na razumljivom jeziku. Mnogi programi za stolno izdavaštvo i uređivanje web stranica danas koriste Lorem Ipsum kao zadani model teksta, i ako potražite 'lorem ipsum' na Internetu, kao rezultat dobit ćete mnoge stranice u izradi.
+              </p>
+              <p className="mb-5">Postoje mnoge varijacije odlomaka iz Lorem Ipsum-a, ali većina je pretrpjela kojekakve promjene s dodanim humorom, ili nasumičnim riječima koje nikako tu ne spadaju. Ako trebate koristiti Lorem Ipsum, morate biti sigurni da tekst ne sadrži skrivene nepodobne riječi ili fraze. Lorem Ipsum generatori na Internetu većinom ponavljaju zadane odlomke po potrebi, što ovaj naš čini prvim pravim generatorom na Internetu. Mi koristimo riječnik od 200 latinskih riječi, u kombinaciji s nekoliko modela rečeničnih struktura, da bi generirali Lorem Ipsum koji izgleda razumno.</p>
+            </div>
+            {/**button*/}
+          </div>
+        </div>
       </motion.div>
     </section>
   )
