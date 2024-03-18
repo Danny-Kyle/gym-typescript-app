@@ -4,7 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
     icon: JSX.Element,
-    description: string,
+    description: string| undefined,
     title: string,
     setSelectedPage: (value: SelectedPage) => void
 }
