@@ -2,7 +2,9 @@ import { BenefitType, SelectedPage } from "@/shared/types";
 import { motion } from 'framer-motion'
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import Benefit from "./Benefit";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
 import HText from "@/shared/HText";
+import ActionButton from "@/shared/ActionButton";
 
 
 const benefits: Array<BenefitType> = [
@@ -81,30 +83,53 @@ const Benefits = ({setSelectedPage}: Props) => {
         </motion.div>
 
         {/**graphic images and desc */}
-        <div>
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 lg:flex">
           {/**graph */}
-          <img src="" alt=""/>
+          <img src={BenefitsPageGraphic} alt="benefits" className="mx-auto "/>
           {/**description */}
           <div>
             {/**title*/}
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
-                <div>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 1.5 }}
+                  variants={{ 
+                      hidden: { opacity: 0, x: 50 }, 
+                      visible: {opacity: 1, x: 0}
+                  }}
+                >
                   <HText>
                     MILLIONS OF HAPPY MEMBERS GETTING {"  "}
                     <span className="text-primary-500">FIT</span>
                   </HText>
-                </div>
+                </motion.div>
               </div>
             </div>
             {/**dsc*/}
-            <div>
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.2, duration: 1.5 }}
+              variants={{ 
+                  hidden: { opacity: 0, x: 50 }, 
+                  visible: {opacity: 1, x: 0}
+              }}
+            >
               <p className="my-5">
               Odavno je uspostavljena činjenica da čitača ometa razumljivi tekst dok gleda raspored elemenata na stranici. Smisao korištenja Lorem Ipsum-a jest u tome što umjesto 'sadržaj ovjde, sadržaj ovjde' imamo normalni raspored slova i riječi, pa čitač ima dojam da gleda tekst na razumljivom jeziku. Mnogi programi za stolno izdavaštvo i uređivanje web stranica danas koriste Lorem Ipsum kao zadani model teksta, i ako potražite 'lorem ipsum' na Internetu, kao rezultat dobit ćete mnoge stranice u izradi.
               </p>
               <p className="mb-5">Postoje mnoge varijacije odlomaka iz Lorem Ipsum-a, ali većina je pretrpjela kojekakve promjene s dodanim humorom, ili nasumičnim riječima koje nikako tu ne spadaju. Ako trebate koristiti Lorem Ipsum, morate biti sigurni da tekst ne sadrži skrivene nepodobne riječi ili fraze. Lorem Ipsum generatori na Internetu većinom ponavljaju zadane odlomke po potrebi, što ovaj naš čini prvim pravim generatorom na Internetu. Mi koristimo riječnik od 200 latinskih riječi, u kombinaciji s nekoliko modela rečeničnih struktura, da bi generirali Lorem Ipsum koji izgleda razumno.</p>
-            </div>
+            </motion.div>
             {/**button*/}
+            <div className="relative mt-16">
+              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
