@@ -22,6 +22,13 @@ const benefits: Array<BenefitType> = [
   }
 ]
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: {staggerChildren: 0.2}
+  }
+}
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 }
