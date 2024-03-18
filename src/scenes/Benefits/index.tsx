@@ -2,6 +2,7 @@ import { BenefitType, SelectedPage } from "@/shared/types";
 import { motion } from 'framer-motion'
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import Benefit from "./Benefit";
+import HText from "@/shared/HText";
 
 
 const benefits: Array<BenefitType> = [
@@ -42,6 +43,16 @@ const Benefits = ({setSelectedPage}: Props) => {
       <motion.div
       onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
+        <div className="md:my-5 md:w-3/5 ">
+          <HText>MORE THEN JUST A GYM</HText>
+          <p className="my-5 text-sm">
+            We provide world class fitness equipment, trainers and classes to 
+            get you to your ultimate fitness goals with ease. We provide true 
+            care into each and every member
+          </p>
+        </div>
+
+        {/**indi benesfits */}
         <div>
           {benefits.map((benefit: BenefitType) => (
             <Benefit 
