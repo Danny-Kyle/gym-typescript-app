@@ -1,6 +1,7 @@
 import { BenefitType, SelectedPage } from "@/shared/types";
 import { motion } from 'framer-motion'
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
+import Benefit from "./Benefit";
 
 
 const benefits: Array<BenefitType> = [
