@@ -35,8 +35,14 @@ const Benefits = ({setSelectedPage}: Props) => {
       onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         <div>
-          {benefits.map((benefit) => (
-            <Benefit />
+          {benefits.map((benefit: BenefitType) => (
+            <Benefit 
+            key={benefit.title}
+            icon={benefit.icon}
+            title={benefit.title}
+            description={benefit.description}
+            setSelectedPage={setSelectedPage}
+            />
           ))}
         </div>
       </motion.div>
