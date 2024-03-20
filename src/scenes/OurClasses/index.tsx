@@ -30,10 +30,11 @@ const OurClasses = ({setSelectedPage}: Props) => {
                     <div className='md:w-3/5'>
                         <HText>OUR CLASSES</HText>
                         <p className='py-5'>
-                            
+                        Pellentesque sit amet placerat felis, non convallis velit. Integer quis cursus ex. Nam ipsum orci, pretium non metus in, ullamcorper tempus urna. Curabitur feugiat dapibus placerat. Suspendisse at orci gravida, aliquam nulla et, blandit turpis. Nulla facilisi. Vestibulum scelerisque ligula a dolor vulputate, et euismod lacus feugiat. Aliquam erat volutpat. Pellentesque molestie ex nec enim gravida tempor.
                         </p>
                     </div>
                 </motion.div>
+                <div></div>
             </motion.div>
         </section>
     )
