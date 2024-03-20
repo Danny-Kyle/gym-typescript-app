@@ -55,7 +55,7 @@ const Benefits = ({setSelectedPage}: Props) => {
               visible: {opacity: 1, x: 0}
           }}
         className="md:my-5 md:w-3/5 ">
-          <HText>MORE THEN JUST A GYM</HText>
+          <HText>MORE THAN JUST A GYM</HText>
           <p className="my-5 text-sm">
             We provide world class fitness equipment, trainers and classes to 
             get you to your ultimate fitness goals with ease. We provide true 
