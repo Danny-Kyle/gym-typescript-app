@@ -13,11 +13,15 @@ const index = () => {
             </div>
             <div className="mt-16 basis-1/4 md:mt-0">
                 <h4 className="font-bold">Links</h4>
-                <p className="my-5">Contact Me</p>
+               <p className="my-5">Suspendisse vel viverra dolor. </p>
+               <p className="my-5">Proin quis vehicula sapien</p>
+               <p>Donec sed lacus arcu.</p>
+            </div>
+            <div>
+            <h4 className="font-bold">Contact Me</h4>
                 <p className="my-5">Whatsapp, Telegram any platform acceptable with this number</p>
                 <p>(+234)8156131209</p>
             </div>
-            <div></div>
         </div>
     </footer>
   )
