@@ -1,4 +1,4 @@
-import { SelectedPage } from '../../shared/types';
+import { SelectedPage, ClassType } from '../../shared/types';
 import image1 from "@/assets/image1.png"
 import image2 from "@/assets/image2.png"
 import image3 from "@/assets/image3.png"
@@ -7,6 +7,42 @@ import image5 from "@/assets/image5.png"
 import image6 from "@/assets/image6.png"
 import HText from '@/shared/HText';
 import { motion } from 'framer-motion';
+
+const classes:  Array<ClassType>=[
+    {
+        id: "1",
+        name: "Weight Training Classes",
+        description: "Curabitur feugiat dapibus placerat. Suspendisse at orci gravida, aliquam nulla et, blandit turpis. Nulla facilisi. Vestibulum scelerisque ligula a dolor vulputate, et euismod lacus feugiat.",
+        image: image1
+    },
+    {
+        id: "2",
+        name: "Yoga Sessions",
+        image: image2
+    },
+    {
+        id: "3",
+        name: "Abs and Core Classes",
+        description: "Nam imperdiet dictum nibh quis ullamcorper. Fusce venenatis faucibus velit vel dapibus. Nunc non condimentum urna. Mauris gravida diam id leo dapibus dignissim. Integer ac fermentum velit. Aliquam erat volutpat. Pellentesque a mauris elit.",
+        image: image3
+    },
+    {
+        id: "4",
+        name: "Adventure Classes",
+        image: image4
+    },
+    {
+        id: "5",
+        name: "Fitness Classes",
+        description: "In vulputate dapibus posuere. Integer condimentum faucibus lacus, eget sollicitudin mauris scelerisque convallis. Nullam luctus felis ipsum.",
+        image: image5
+    },
+    {
+        id: "6",
+        name: "Training Classes",
+        image: image6
+    }
+]
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -34,7 +70,13 @@ const OurClasses = ({setSelectedPage}: Props) => {
                         </p>
                     </div>
                 </motion.div>
-                <div></div>
+                <div className='mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden'>
+                    <ul className='w-[2800px] whitespace-nowrap'>
+                        {classes.map((item, index) =>(
+                            <Class />
+                        ) )}
+                    </ul>
+                </div>
             </motion.div>
         </section>
     )
