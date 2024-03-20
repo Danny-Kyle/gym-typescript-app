@@ -10,3 +10,10 @@ export enum SelectedPage {
     title: string;
     description: string| undefined;
   }
+
+  export interface ClassType {
+    id: string,
+    name: string,
+    description?: string,
+    image: string
+  }
